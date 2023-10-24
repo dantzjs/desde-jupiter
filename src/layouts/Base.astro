@@ -1,0 +1,104 @@
+---
+import { SEO } from 'astro-seo';
+import Header from '@partials/Header';
+import Footer from '@partials/Footer';
+
+interface Props {
+  title: string;
+  description?: string;
+}
+
+const { title, description } = Astro.props;
+---
+
+<!doctype html>
+<html lang="es" data-theme="light">
+  <head>
+    <SEO
+      title={title}
+      description={description}
+      openGraph={{
+        basic: {
+          title: title,
+          type: 'website',
+          image:
+            'https://user-images.githubusercontent.com/5182256/131216951-8f74f425-f775-463d-a11b-0e01ad9fce8d.png',
+        },
+      }}
+      extend={{
+        link: [{ rel: 'icon', href: '/favicon.svg' }],
+        meta: [],
+      }}
+    />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <meta name="generator" content={Astro.generator} />
+  </head>
+  <body class="flex flex-col min-h-screen">
+    <Header />
+    <slot />
+    <Footer />
+    <style is:global>
+      .publication p {
+        @apply mb-8 tracking-wide;
+      }
+
+      main {
+        flex-grow: 1;
+      }
+
+      p,
+      .text-base,
+      .prose {
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+      }
+
+      .menu,
+      h1,
+      h2,
+      h3,
+      h4,
+      h5,
+      h6 {
+        font-family: 'Heebo Variable', sans-serif;
+      }
+    </style>
+
+    <script is:inline>
+      const theme = (() => {
+        if (localStorage?.getItem('theme')) {
+          return localStorage.getItem('theme');
+        }
+
+        if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+          return 'dark';
+        }
+
+        return 'light';
+      })();
+
+      if (theme === 'light') {
+        document.documentElement.setAttribute('data-theme', 'light');
+      } else {
+        document.documentElement.setAttribute('data-theme', 'dark');
+      }
+
+      window.localStorage.setItem('theme', theme);
+
+      const handleToggleClick = () => {
+        const element = document.documentElement;
+        const isDark = element.getAttribute('data-theme') === 'dark';
+
+        isDark
+          ? document.documentElement.setAttribute('data-theme', 'light')
+          : document.documentElement.setAttribute('data-theme', 'dark');
+
+        localStorage.setItem('theme', isDark ? 'light' : 'dark');
+      };
+
+      document
+        .getElementById('themeToggle')
+        .addEventListener('click', handleToggleClick);
+    </script>
+  </body>
+</html>

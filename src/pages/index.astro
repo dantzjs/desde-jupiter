@@ -1,0 +1,51 @@
+---
+import { IconRocket } from '@tabler/icons-react';
+import { defaultDescription } from '@config/config';
+import Layout from '@layouts/Base.astro';
+import StaticPublications from '@components/StaticPublications';
+/* import CTA from '@components/CTA'; */
+---
+
+<Layout
+  title="Desde Júpiter"
+  description={defaultDescription}
+>
+  <main>
+    <div class="hero auto-cols-fr pt-8">
+      <div class="hero-content flex-col lg:flex-row-reverse items-start">
+        <div class="w-full text-center lg:text-left prose">
+          <h1
+            class="text-4xl lg:text-5xl font-bold unset
+        bg-gradient-to-r bg-left-bottom bg-no-repeat
+        bg-[length:100%_20%] from-primary to-secondary max-w-fit m-auto lg:m-0"
+          >
+            ¡Hola desde Júpiter!
+          </h1>
+          <p>
+            Soy <b>Daniel</b>, un ingeniero de <b>Júpiter</b> que vive en la
+            Tierra <IconRocket className="inline" />
+          </p>
+          <p>
+            Me encanta explorar nuevas tecnologías y aplicarlas para resolver
+            problemas reales. Actualmente estoy trabajando en DevOps,
+            automatizando y desplegando aplicaciones en la nube.
+          </p>
+          <p>Ah, también estoy creando mi propia Startup {':)'}</p>
+        </div>
+        <div
+          class="divider divider-vertical lg:divider-horizontal after:bg-neutral before:bg-neutral"
+        >
+        </div>
+        <section class="w-full">
+          <!-- <h2
+            class="font-bold text-text-heading text-left text-3xl md:text-4xl pb-2 overflow-hidden"
+          >
+            Artículos Destacados
+          </h2> -->
+          <StaticPublications />
+          <!-- <CTA action={{ url: '/blog', title: 'Leer Más' }} subAction={null} /> -->
+        </section>
+      </div>
+    </div>
+  </main>
+</Layout>

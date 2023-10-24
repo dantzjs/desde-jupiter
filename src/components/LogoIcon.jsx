@@ -1,0 +1,69 @@
+export default function Icon() {
+  return (
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      width="32"
+      height="32"
+      version="1.1"
+      viewBox="0 0 66.863 66.863"
+      xmlSpace="preserve"
+    >
+      <g transform="translate(-86.443 -75.227)">
+        <g>
+          <circle
+            cx="119.874"
+            cy="108.658"
+            r="31.85"
+            fill="none"
+            strokeDasharray="none"
+            strokeOpacity="1"
+            strokeWidth="3.162"
+            className="stroke-neutral"
+          ></circle>
+          <rect
+            width="35.137"
+            height="0.338"
+            x="113.364"
+            y="98.257"
+            fill="#ff2a2a"
+            strokeDasharray="none"
+            strokeOpacity="1"
+            strokeWidth="3.175"
+            ry="0.169"
+            className="stroke-neutral"
+          ></rect>
+          <rect
+            width="25.018"
+            height="0.443"
+            x="125.605"
+            y="106.964"
+            fill="#ff2a2a"
+            strokeDasharray="none"
+            strokeOpacity="1"
+            strokeWidth="3.069"
+            ry="0.222"
+            className="stroke-neutral"
+          ></rect>
+          <rect
+            width="33.62"
+            height="0.35"
+            x="116.104"
+            y="118.756"
+            fill="#ff2a2a"
+            strokeDasharray="none"
+            strokeOpacity="1"
+            strokeWidth="3.163"
+            ry="0.175"
+            className="stroke-neutral"
+          ></rect>
+          <g transform="matrix(1.43637 0 0 1.43637 86.089 81.662)">
+            <path
+              d="M16.6 17.89L7 13.48 7 15.68 13.79 18.8 7 21.91 7 24.11 16.6 19.7z"
+              className="fill-neutral"
+            ></path>
+          </g>
+        </g>
+      </g>
+    </svg>
+  );
+}
