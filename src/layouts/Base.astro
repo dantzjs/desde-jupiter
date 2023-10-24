@@ -9,6 +9,7 @@ interface Props {
 }
 
 const { title, description } = Astro.props;
+const canonicalURL = new URL(Astro.url.pathname, Astro.site);
 ---
 
 <!doctype html>
@@ -21,8 +22,8 @@ const { title, description } = Astro.props;
         basic: {
           title: title,
           type: 'website',
-          image:
-            'https://user-images.githubusercontent.com/5182256/131216951-8f74f425-f775-463d-a11b-0e01ad9fce8d.png',
+          image:'/logo.png',
+          url: canonicalURL
         },
       }}
       extend={{
