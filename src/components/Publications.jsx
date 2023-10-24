@@ -1,8 +1,8 @@
-import { useEffect, useState } from 'react';
+import { useState } from 'react';
 import ReactPaginate from 'react-paginate';
 import Publication from '@components/Publication';
 
-function Items({ currentItems }) {
+const Items = ({ currentItems }) => {
   return (
     <div className="h-64 lg:h-72">
       {currentItems &&

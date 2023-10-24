@@ -1,5 +1,4 @@
 import {
-  IconFiles,
   IconStack2,
   IconBrandHtml5,
   IconBrandCss3,
