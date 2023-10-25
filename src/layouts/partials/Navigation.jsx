@@ -1,4 +1,3 @@
-import { IconBrandGithubFilled } from '@tabler/icons-react';
 import { routes } from '@config/config';
 
 export function Navigation() {
@@ -52,7 +51,6 @@ export function MobileNavigation() {
             className="text-lg rounded-none"
             href="https://github.com/dantzjs"
           >
-            <IconBrandGithubFilled />
             <span>GitHub</span>
           </a>
         </li>

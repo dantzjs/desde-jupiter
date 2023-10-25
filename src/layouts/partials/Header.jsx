@@ -12,10 +12,10 @@ export default function Header() {
         <div className="navbar-end">
           <ul className="menu menu-horizontal px-1">
             <ThemeIcon />
-            <li>
+            <li className="hidden md:block">
               <a className="text-lg ml-2 font-bold md:border rounded-none" href="https://github.com/dantzjs">
-                <IconBrandGithubFilled className="hidden md:block" />
-                <span className="hidden md:block">GitHub</span>
+                <IconBrandGithubFilled />
+                <span>GitHub</span>
               </a>
             </li>
           </ul>
