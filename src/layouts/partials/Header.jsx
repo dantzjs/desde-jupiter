@@ -1,4 +1,4 @@
-import { IconBrandGithubFilled, IconBrandLinkedin } from '@tabler/icons-react';
+import { IconBrandGithubFilled } from '@tabler/icons-react';
 import { Navigation, MobileNavigation } from '@partials/Navigation';
 import Logo from '@components/Logo';
 import ThemeIcon from '@components/ThemeIcon.jsx';
@@ -11,15 +11,10 @@ export default function Header() {
         <Navigation />
         <div className="navbar-end">
           <ul className="menu menu-horizontal px-1">
-            {/* <li>
-              <a className="text-base ml-2 font-bold" href="#">
-                <IconBrandLinkedin />
-              </a>
-            </li> */}
             <ThemeIcon />
             <li>
               <a className="text-lg ml-2 font-bold md:border rounded-none" href="https://github.com/dantzjs">
-                <IconBrandGithubFilled />
+                <IconBrandGithubFilled className="hidden md:block" />
                 <span className="hidden md:block">GitHub</span>
               </a>
             </li>

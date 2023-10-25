@@ -80,7 +80,7 @@ export default function Stack() {
           <IconApi className="inline" />
           <span className="ml-2">REST</span>
         </li>
-        <li class="flex items-center">
+        <li className="flex items-center">
           <IconCarrot className="inline" />
           <span className="ml-2">RabbitMQ</span>
         </li>
@@ -96,7 +96,7 @@ export default function Stack() {
           <IconBrandDocker className="inline" />
           <span className="ml-2">Kubernetes</span>
         </li>
-        <li class="flex items-center">
+        <li className="flex items-center">
           <IconCloudComputing className="inline" />
           <span className="ml-2">NGINX</span>
         </li>

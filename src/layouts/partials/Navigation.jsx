@@ -1,4 +1,5 @@
-import { routes } from "@config/config";
+import { IconBrandGithubFilled } from '@tabler/icons-react';
+import { routes } from '@config/config';
 
 export function Navigation() {
   return (
@@ -6,7 +7,9 @@ export function Navigation() {
       <ul className="menu menu-horizontal px-1">
         {routes.map(({ title, path }) => (
           <li key={title}>
-            <a className="text-lg ml-2 font-semibold rounded-none" href={path}>{title}</a>
+            <a className="text-lg ml-2 font-semibold rounded-none" href={path}>
+              {title}
+            </a>
           </li>
         ))}
       </ul>
@@ -39,9 +42,20 @@ export function MobileNavigation() {
       >
         {routes.map(({ title, path }) => (
           <li key={title}>
-            <a className="text-lg rounded-none" href={path}>{title}</a>
+            <a className="text-lg rounded-none" href={path}>
+              {title}
+            </a>
           </li>
         ))}
+        <li>
+          <a
+            className="text-lg rounded-none"
+            href="https://github.com/dantzjs"
+          >
+            <IconBrandGithubFilled />
+            <span>GitHub</span>
+          </a>
+        </li>
       </ul>
     </div>
   );

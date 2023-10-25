@@ -6,7 +6,7 @@ export default function Footer() {
       <aside className="items-center grid-flow-col">
         <IconPrompt />
         <p className="text-white">
-          Desde Júpiter - Hecho con <IconHeartFilled className="inline"/> y Javascript
+          Hecho con <IconHeartFilled className="inline"/> y Javascript
         </p>
       </aside>
     </footer>
