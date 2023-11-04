@@ -6,9 +6,10 @@ import Footer from '@partials/Footer';
 interface Props {
   title: string;
   description?: string;
+  image?: string
 }
 
-const { title, description } = Astro.props;
+const { title, description, image } = Astro.props;
 const canonicalURL = new URL(Astro.url.pathname, Astro.site);
 ---
 
@@ -22,7 +23,7 @@ const canonicalURL = new URL(Astro.url.pathname, Astro.site);
         basic: {
           title: title,
           type: 'website',
-          image:'/logo.png',
+          image: image || '/logo.png',
           url: canonicalURL
         },
       }}

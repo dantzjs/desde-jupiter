@@ -23,7 +23,7 @@ dayjs.locale('es');
 const created = dayjs(post.data.created).utc().format('DD MMMM YYYY');
 ---
 
-<Layout title={post.data.title} description={post.data.description}>
+<Layout title={post.data.title} description={post.data.description} image={post.data.image?.url}>
   <main class="w-full">
     <article class="featured">
       <div class="w-full m-auto text-center mt-8">
