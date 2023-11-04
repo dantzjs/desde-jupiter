@@ -1,9 +1,9 @@
 ---
 title: 'Creando una Startup desde cero como CTO'
-description: "Desafíos iniciales al crear una startup. Primera parte de la serie."
+description: "Afrontando los primeros desafíos según mi experiencia"
 author: "José D. Gutiérrez"
 image:
-  url: "/p1.jpg"
+  url: "/startup-desde-cero.jpg"
   alt: "featured image"
 tags: ["Startups", "Business", "Learning"]
 created: 2023-11-02
