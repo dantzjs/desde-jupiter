@@ -3,7 +3,7 @@ import { IconRocket } from '@tabler/icons-react';
 import { defaultDescription } from '@config/config';
 import Layout from '@layouts/Base.astro';
 import StaticPublications from '@components/StaticPublications';
-/* import CTA from '@components/CTA'; */
+import CTA from '@components/CTA';
 ---
 
 <Layout
@@ -37,13 +37,13 @@ import StaticPublications from '@components/StaticPublications';
         >
         </div>
         <section class="w-full">
-          <!-- <h2
+          <h2
             class="font-bold text-text-heading text-left text-3xl md:text-4xl pb-2 overflow-hidden"
           >
             Artículos Destacados
-          </h2> -->
+          </h2>
           <StaticPublications />
-          <!-- <CTA action={{ url: '/blog', title: 'Leer Más' }} subAction={null} /> -->
+          <CTA action={{ url: '/blog', title: 'Leer Más' }} subAction={null} />
         </section>
       </div>
     </div>

@@ -3,15 +3,15 @@ export const routes = [
     title: 'Inicio',
     path: '/',
   },
-  /*   {
+  {
     title: 'Blog',
     path: '/blog',
   },
   {
     title: 'Notas',
-    path: '/blog'
+    path: '/notes'
   },
-  {
+/*   {
     title: 'Proyectos',
     path: '/blog'
   }, */

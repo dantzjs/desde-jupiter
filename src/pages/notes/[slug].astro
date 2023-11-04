@@ -8,27 +8,27 @@ import Layout from '@layouts/Base.astro';
 import avatar from '@assets/images/avatar.jpg';
 
 export async function getStaticPaths() {
-  const posts = await getCollection('blog');
-  return posts.map((post) => ({
-    params: { slug: post.slug },
-    props: { post },
+  const notes = await getCollection('notes');
+  return notes.map((note) => ({
+    params: { slug: note.slug },
+    props: { note },
   }));
 }
 
-const { post } = Astro.props;
-const { Content, remarkPluginFrontmatter } = await post.render();
+const { note } = Astro.props;
+const { Content, remarkPluginFrontmatter } = await note.render();
 
 dayjs.extend(utc);
 dayjs.locale('es');
-const created = dayjs(post.data.created).utc().format('DD MMMM YYYY');
+const created = dayjs(note.data.created).utc().format('DD MMMM YYYY');
 ---
 
-<Layout title={post.data.title} description={post.data.description}>
+<Layout title={note.data.title} description={note.data.description}>
   <main class="w-full">
     <article class="featured">
       <div class="w-full m-auto text-center mt-8">
         {
-          post.data.tags.map((tag: string) => (
+          note.data.tags.map((tag: string) => (
             <span class="mr-4 uppercase font-light">{tag}</span>
           ))
         }
@@ -38,7 +38,7 @@ const created = dayjs(post.data.created).utc().format('DD MMMM YYYY');
     md:bg-gradient-to-r md:bg-left-bottom md:bg-no-repeat
     md:bg-[length:100%_20%] md:from-primary md:to-secondary max-w-fit"
       >
-        {post.data.title}
+        {note.data.title}
       </h1>
       <div class="flex justify-center space-x-3">
         <div class="flex items-center gap-3">
@@ -50,7 +50,7 @@ const created = dayjs(post.data.created).utc().format('DD MMMM YYYY');
             </div>
           </div>
           <div>
-            <p>{post.data.author}</p>
+            <p>{note.data.author}</p>
             <div class="flex items-center space-x-2 text-sm">
               <time datetime={created}>
                 {created}

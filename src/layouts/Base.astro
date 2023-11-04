@@ -68,6 +68,14 @@ const canonicalURL = new URL(Astro.url.pathname, Astro.site);
       h6 {
         font-family: 'Heebo Variable', sans-serif;
       }
+
+      .publication img {
+        @apply m-auto
+      }
+
+      .publication a {
+        @apply underline decoration-2 decoration-primary
+      }
     </style>
 
     <script is:inline>
