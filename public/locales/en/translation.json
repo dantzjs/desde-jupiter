@@ -1,0 +1,43 @@
+{
+  "site": {
+    "title": "From Jupiter",
+    "description": "Explore high-quality articles and resources on software development, JavaScript, Cloud Computing, and DevOps"
+  },
+  "home": {
+    "greeting": "Hi from Jupiter!",
+    "about": {
+      "intro": "I'm <0>Daniel</0>, an engineer from <1>Jupiter</1> living on Earth",
+      "content": "I love exploring new technologies and applying them to solve real-world problems. Currently, I'm working in DevOps, automating and deploying applications in the cloud"
+    },
+    "articles": {
+      "title": "Featured Articles",
+      "cta": "Read More"
+    }
+  },
+  "routes": {
+    "home": "home",
+    "blog": "blog",
+    "notes": "notes",
+    "about": "about"
+  },
+  "controls": {
+    "previous": "Previous",
+    "next": "Next"
+  },
+  "blog": {
+    "title": "Featured Articles",
+    "name": "blog"
+  },
+  "notes": {
+    "title": "All Notes",
+    "name": "notes"
+  },
+  "about": {
+    "roles": "Telecommunications Eng. / Backend Developer / DevOps",
+    "title": "About me"
+  },
+  "footer": {
+    "made": "Made with",
+    "and": "and Javascript"
+  }
+}
