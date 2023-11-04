@@ -25,24 +25,3 @@ const { page } = Astro.props;
     </section>
   </main>
 </Layout>
-
-<style is:global>
-  .pagination {
-    @apply flex flex-row justify-between list-none mt-8 lg:px-20;
-  }
-
-  .pagination li a {
-    @apply m-1 text-base btn rounded-none normal-case bg-neutral text-neutral-content hover:bg-neutral;
-  }
-
-  .pagination li.selected a {
-    @apply bg-primary text-white;
-  }
-  .pagination li.disabled a {
-    color: grey;
-  }
-  .pagination li.disable,
-  .pagination li.disabled a {
-    @apply cursor-default
-  }
-</style>

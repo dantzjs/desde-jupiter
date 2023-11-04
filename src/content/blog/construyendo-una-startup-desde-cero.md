@@ -46,13 +46,15 @@ Elegir el conjunto de tecnologías correcto es una de las etapas críticas de cu
 
 ¿Y la base de datos?
 
-La respuesta rápida es que cada lenguaje fue creado con una necesidad específica. Explora el lenguaje que se adapte mejor al tipo de solución que estás creando. Sin embargo, la mayoría de los productos digitales pueden adaptarse y escalar en casi cualquier lenguaje, así que intenta usar el que ya conoces (siempre y cuando se ajuste a tu producto). Construir una startup lleva mucho tiempo y la prioridad es llevarla al mercado. Pasar tiempo aprendiendo un nuevo lenguaje desde cero **podría costarte demasiado**.
+La respuesta rápida es que cada lenguaje fue creado con una necesidad específica. Explora el lenguaje que se adapte mejor al tipo de solución que estás creando. Sin embargo, la mayoría de los productos digitales pueden adaptarse y escalar en casi cualquier lenguaje, así que intenta usar el que ya conoces (siempre y cuando se ajuste a tu producto). **Construir una startup lleva mucho tiempo** y la prioridad es llevarla al mercado. Pasar tiempo aprendiendo un nuevo lenguaje desde cero **podría costarte demasiado**.
 
 En cuanto a los frameworks, la respuesta es la misma: **usa el que mejor conozcas**. Investiga qué tan escalable puede ser para lo que planeas construir y valida tu elección. Recomiendo usar algún framework derivado porque generalmente vienen con funciones integradas, lo que ahorra mucho tiempo. Por ejemplo, en lugar de Vue, usa Nuxt o Next en lugar de React.
 
 Evita utilizar paquetes, frameworks o herramientas que tengan **poca documentación** o que no hayan sido actualizados durante mucho tiempo. Aunque aún puedan funcionar bien, **podrían incluir vulnerabilidades** de seguridad o incompatibilidades con paquetes actuales.
 
-Otro aspecto a considerar es preferir opciones que hayan sido probadas y bien documentadas por la comunidad en general, para evitar caer en el Desarrollo Impulsado por Hype (HDD). Seguramente, al comenzar un nuevo proyecto, ya sea como hobby, has querido probar ese nuevo framework o paquete que descubriste y que parece prometedor. Aprender nuevas herramientas es importante, es lo que deberíamos hacer diariamente, pero crear un producto con la intención de lanzarlo al mercado ya es una apuesta arriesgada en muchos aspectos. **Evita agregar más variables si consideras que el riesgo no vale la pena**.
+Otro aspecto a considerar es preferir opciones que hayan sido probadas y bien documentadas por la comunidad en general, para evitar caer en el Desarrollo Impulsado por Hype (HDD). Seguramente, al comenzar un nuevo proyecto, ya sea como hobby, has querido probar ese nuevo framework o paquete que descubriste y que parece prometedor. ¿Cierto?
+
+Aprender nuevas herramientas es importante, es lo que deberíamos hacer diariamente, pero crear un producto con la intención de lanzarlo al mercado ya es una apuesta arriesgada en muchos aspectos. **Evita agregar más variables si consideras que el riesgo no vale la pena**.
 
 ### MVP: La Primera Propuesta
 

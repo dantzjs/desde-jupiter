@@ -38,15 +38,15 @@ Ahora, un Dominio implica varios elementos
 
 <Image src={es1} alt="domain entities"/>
 
-**Role**: Es la entidad “protagonista” que ejecutará comandos. Puede ser un individuo o un sistema
+**Role**: Es la entidad “protagonista” que ejecutará comandos. Puede ser un individuo o un sistema.
 
-**Command**: Es la acción que desencadenará en uno o más comandos dentro del dominio
+**Command**: Es la acción que desencadenará en uno o más comandos dentro del dominio.
 
 **Event**: Cualquier evento importante. Pueden implicar cambios en el sistema o no.
 
-**External System**: Un sistema por sí solo que no se encuentra dentro de nuestro dominio. Pueden ser servicios de terceros o un microservicio diferente al contexto actual
+**External System**: Un sistema por sí solo que no se encuentra dentro de nuestro dominio. Pueden ser servicios de terceros o un microservicio diferente al contexto actual.
 
-**Business Rule**: Reglas del negocio. Específicamete condiciones o requerimientos para ejecutar comandos o disparar eventos
+**Business Rule**: Reglas del negocio. Específicamete condiciones o requerimientos para ejecutar comandos o disparar eventos.
 
 **Aggregate**: Un agregado es un conjunto de objetos que dentro del dominio se pueden tratar como una sola unidad. Supongamos un sistema de ordenes, esta contiene información como la lista de artículos o el status, datos que por sí solos no hacen mucho sentido pero en conjunto encapsulan toda la lógica necesaria. En este caso, la orden es el agregado.
 
@@ -64,13 +64,13 @@ El primer paso es identificar todos los eventos importantes. Recordemos que la i
 
 ### Commands
 
-Luego procedemos con los comandos necesarios para ejecutar cada uno de estos eventos
+Luego procedemos con los comandos necesarios para ejecutar cada uno de estos eventos.
 
 <Image src={es3} alt="domain commands"/>
 
 ### Roles
 
-Notarán que a partir de los eventos descubrir los comandos puede ser una tarea sencilla. Ahora toca identificar a los participantes que ejecutarán estos comandos
+Notarán que a partir de los eventos descubrir los comandos puede ser una tarea sencilla. Ahora toca identificar a los participantes que ejecutarán estos comandos.
 
 <Image src={es4} alt="domain roles"/>
 
@@ -82,7 +82,7 @@ He optado por 3 roles:
 
 ### External System
 
-El siguiente paso es conectar los servicios externos en caso de que existan
+El siguiente paso es conectar los servicios externos en caso de que existan.
 
 <Image src={es5} alt="domain external system"/>
 
@@ -90,7 +90,7 @@ Ejemplos comunes son **pasarelas de pago** o **microservicios**. Estos sistemas 
 
 ### Business Rules
 
-Para las reglas de negocio, estas normalmente son **condiciones o requerimientos** para que un evento o comando pueda ejecutarse. Por ejemplo: Para enviar una orden el pago debe ser exitoso
+Para las reglas de negocio, estas normalmente son **condiciones o requerimientos** para que un evento o comando pueda ejecutarse. Por ejemplo: Para enviar una orden el pago debe ser exitoso.
 
 <Image src={es6} alt="domain business rules"/>
 
@@ -100,7 +100,7 @@ Esta relación entre reglas y comandos no se refiere a que la regla sea quien ac
 
 Recordando que un agregado es un **conjunto de elementos que actúan como una entidad**, para este caso mi agregado es “**Order**”. Esta entidad contiene información sobre los artículos que contienen y su status de envío.
 
-La finalidad es identificar los eventos que pueden cambiar el estado de los agregados. Por ejemplo, los eventos de **Order Placed**, **Order Shipped**, **Order Delivered** y **Order Cancelled** van a actualizar el estatus del pedido y de esta forma llevamos un control visual de los cambios que ocurren dentro del dominio
+La finalidad es identificar los eventos que pueden cambiar el estado de los agregados. Por ejemplo, los eventos de **Order Placed**, **Order Shipped**, **Order Delivered** y **Order Cancelled** van a actualizar el estatus del pedido y de esta forma llevamos un control visual de los cambios que ocurren dentro del dominio.
 
 <Image src={es7} alt="domain aggregate"/>
 
@@ -110,9 +110,9 @@ El último paso es completamente opcional. Puede ser de ayudar si tienes muchas 
 
 <Image src={es8} alt="domain view"/>
 
-### Finalizando
+## Finalizando
 
-Ya una vez que hayas definido todos los flujos necesarios idealmente estos deben poder ser encapsulados
+Ya una vez que hayas definido todos los flujos necesarios idealmente estos deben poder ser encapsulados.
 
 <Image src={es9} alt="domain context"/>
 
@@ -120,8 +120,8 @@ Cada flujo actúa en su propio contexto dentro del dominio con una clara separac
 
 Últimos consejos:
 
-- Involucra variedad de roles (personas) en la sesión. Gerentes, equipo técnico, diseñadores. **Todo el mundo puede participar**
-- Ten un objetivo previamente definido. No se trata de hacer el sistema completo en una sola sesión. Enfócate en un único flujo o problema a la vez. **No más de dos horas por sesión**
-- Recuerda la consistencia e **importancia de los colores** (no tienen que ser los mismos del ejemplo, solo deben mantener consistencia)
+- Involucra variedad de roles (personas) en la sesión. Gerentes, equipo técnico, diseñadores. **Todo el mundo puede participar**.
+- Ten un objetivo previamente definido. No se trata de hacer el sistema completo en una sola sesión. Enfócate en un único flujo o problema a la vez. **No más de dos horas por sesión**.
+- Recuerda la consistencia e **importancia de los colores** (no tienen que ser los mismos del ejemplo, solo deben mantener consistencia).
 - Evita usar lenguaje técnico. No solo por simplicidad, sino también que probablemente no todos en la sesión sean desarrolladores. **Prioriza el lenguaje natural**.
 - Con esta técnica no se trata de llegar a la solución ideal al primer intento. Realiza nuevas **sesiones de iteración para encontrar oportunidades de mejoras**.

@@ -32,11 +32,11 @@ export default function Publications({ items, itemsPerPage }) {
       <Items currentItems={currentItems} />
       <ReactPaginate
         breakLabel="..."
-        nextLabel="Siguiente >"
+        nextLabel="Siguiente"
         onPageChange={handlePageClick}
         pageRangeDisplayed={5}
         pageCount={pageCount}
-        previousLabel="< Anterior"
+        previousLabel="Anterior"
         renderOnZeroPageCount={null}
         className="pagination"
       />

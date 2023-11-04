@@ -23,10 +23,16 @@ dayjs.locale('es');
 const created = dayjs(note.data.created).utc().format('DD MMMM YYYY');
 ---
 
-<Layout title={note.data.title} description={note.data.description} image={note.data.image?.url}>
+<Layout
+  title={note.data.title}
+  description={note.data.description}
+  image={note.data.image?.url}
+>
   <main class="w-full">
     <article class="featured">
-      <div class="w-full m-auto text-center mt-8">
+      <div
+        class="w-full m-auto text-center mt-8 flex flex-col md:flex-row md:justify-center"
+      >
         {
           note.data.tags.map((tag: string) => (
             <span class="mr-4 uppercase font-light">{tag}</span>
@@ -46,7 +52,7 @@ const created = dayjs(note.data.created).utc().format('DD MMMM YYYY');
             <div
               class="rounded-full w-10 ring ring-primary ring-offset-base-100 ring-offset-2"
             >
-              <Image src={avatar} alt="avatar"/>
+              <Image src={avatar} alt="avatar" />
             </div>
           </div>
           <div>
@@ -66,7 +72,7 @@ const created = dayjs(note.data.created).utc().format('DD MMMM YYYY');
         class="divider divider-vertical after:bg-neutral before:bg-neutral w-1/2 md:w-1/3 m-auto my-8"
       >
       </div>
-      <div class="publication w-4/5 lg:w-1/2 text-left text-base m-auto prose-lg mb-16">
+      <div class="publication">
         <Content />
       </div>
     </article>
