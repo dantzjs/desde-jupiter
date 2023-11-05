@@ -2,18 +2,18 @@ import { useState } from 'react';
 import ReactPaginate from 'react-paginate';
 import Publication from '@components/Publication';
 
-const Items = ({ currentItems }) => {
+const Items = ({ currentItems, collection }) => {
   return (
     <div className="h-64 lg:h-72">
       {currentItems &&
         currentItems.map((item) => (
-          <Publication url={`/${item.collection}/${item.slug}`} title={item.data.title} />
+          <Publication url={`/${collection}/${item.slug}`} title={item.data.title} />
         ))}
     </div>
   );
 }
 
-export default function Publications({ items, itemsPerPage }) {
+export default function Publications({ items, itemsPerPage, collection }) {
   const [itemOffset, setItemOffset] = useState(0);
 
   const endOffset = itemOffset + itemsPerPage;
@@ -29,7 +29,7 @@ export default function Publications({ items, itemsPerPage }) {
 
   return (
     <>
-      <Items currentItems={currentItems} />
+      <Items currentItems={currentItems} collection={collection} />
       <ReactPaginate
         breakLabel="..."
         nextLabel="Siguiente"

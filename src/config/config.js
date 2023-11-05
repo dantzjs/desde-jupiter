@@ -9,12 +9,8 @@ export const routes = [
   },
   {
     title: 'Notas',
-    path: '/notes'
+    path: '/notas'
   },
-/*   {
-    title: 'Proyectos',
-    path: '/blog'
-  }, */
   {
     title: 'Perfil',
     path: '/perfil',
@@ -22,4 +18,4 @@ export const routes = [
 ];
 
 export const defaultDescription =
-  'Artículos y recursos sobre desarrollo de software, Javascript, Cloud Computing y DevOps';
+  "Explora una amplia gama de artículos y recursos especializados en el desarrollo de software, Javascript, Cloud Computing y DevOps. Aprende las últimas tendencias y mejores prácticas en tecnología a través de nuestro contenido experto.";

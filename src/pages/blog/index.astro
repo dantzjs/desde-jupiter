@@ -7,7 +7,7 @@ import { defaultDescription } from '@config/config';
 const posts = await getCollection('blog');
 ---
 
-<Layout title="Desde Júpiter | Blog" description={defaultDescription}>
+<Layout title="Desde Júpiter" description={defaultDescription}>
   <main class="p-4 w-full">
     <h2
       class="font-bold text-text-heading text-center text-3xl md:text-4xl pt-4 pb-2 overflow-hidden"
@@ -15,7 +15,7 @@ const posts = await getCollection('blog');
       <span>Todos los Artículos</span>
     </h2>
     <section id="container" class="container flex-shrink-0 grid justify-left w-full md:w-1/2 lg:w-1/3 m-auto">
-      <Publications items={posts} itemsPerPage="7" client:only />
+      <Publications items={posts} itemsPerPage="7" collection="blog" client:only />
     </section>
   </main>
 </Layout>
