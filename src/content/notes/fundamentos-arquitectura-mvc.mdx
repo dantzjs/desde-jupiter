@@ -1,0 +1,98 @@
+---
+title: 'Fundamentos de Arquitectura de Software'
+description: "Este análisis detallado explora cómo estos principios fundamentales influyen en el diseño y desarrollo exitoso de software de alto rendimiento"
+author: "José D. Gutiérrez"
+image:
+  url: "/event-storming.jpg"
+  alt: "featured image"
+tags: ["Learning", "Metodologies", "Architecture"]
+created: 2023-11-07
+---
+
+import { Image } from 'astro:assets';
+import mvc from '@assets/images/mvc.png';
+
+**¡Hola desde Júpiter!** 🖖
+
+La **Arquitectura de Software** define la estructura de un sistema, todos sus elementos o partes y cómo estos deben interactuar entre sí. En contraste, no es muy diferente de un plano estructural de un edificio.
+
+La finalidad del diseño de una arquitectura es ofrecer una estructura que nos permita identificar todos los elementos de nuestro sistema y las reglas involucradas para facilitar la construcción, mantenimiento y evolución. Permite pensar en la solución del problema antes de entrar a la fase de desarrollo.
+
+Para esto primero es necesario **conocer y entender los requerimientos** en la fase de análisis. Por cierto, <a href="/notas/event-storming">Event Storming</a> puede ayudarnos con eso.
+
+En la fase de diseño ya podemos enfocarnos en cómo estructurar la solución aplicando **Patrones de Arquitectura** o también llamados **Estilos de Arquitectura** (No confundir con Patrones de Diseño).  
+
+## Principios
+
+Estos patrones siguen 3 principios básicos:
+
+### Abstracción
+
+La idea de la arquitectura consiste en la abstracción, donde se **simplifica la complejidad del sistema** al dividirlo en elementos más pequeños y manejables. Estos elementos interactúan entre sí de una forma consistente y predecible.
+
+### Separación de Responsabilidades
+
+Cada elemento o componente del sistema debe tener bien definida su responsabilidad y no debe hacer tareas que escapen de su propio contexto. Es decir, **cada elemento tiene su propia razon de ser**.
+
+### Reusabilidad
+
+El principio DRY (**Dont Repeat Yourself**, no te repitas a ti mismo) fomenta la idea de estructurar o “encapsular” elementos de forma que permita ser utilizado en varios lugares dentro de la aplicación **evitando la duplicación de código**.
+
+Podemos entender mejor estos principios si analizamos un patrón clásico como lo es el **Patrón MVC**. Este patrón consiste en dividir un sistema en 3 componentes:
+
+- **Modelo**: Contiene el acceso a datos y toda la lógica de la aplicación
+- **Vista**: La interfaz gráfica con la cual el usuario interactúa
+- **Controlador**: Intermediario entre la Vista y Modelo. Se encarga de transportar los datos
+
+Por ejemplo, supongamos una aplicación sencilla de ordenes y pedidos que utiliza una API REST para comunicarse:
+
+<Image src={mvc} alt="MVC Flow"/>
+
+El flujo funcional es:
+
+1. El usuario desde una interfaz gráfica interactúa con la aplicación y decide crear un nuevo pedido.
+2. **La Vista** llama a un endpoint */orders* que se encuentra en el **Controlador**.
+3. Este controlador recibe los datos enviados desde la vista y se los envía al **Modelo**.
+4. El modelo procesa los datos del pedido, almacena en base de datos y retorna la respuesta al controlador.
+5. El controlador retorna la respuesta del Modelo a la vista para ser actualizada y mostrarle al usuario “Su pedido ha sido creado”. 
+
+Aquí podemos notar los 3 principios aplicados:
+
+1. **Abstracción**: La complejidad del sistema de simplificó a únicamente 3 componentes
+2. **Separación de responsabilidades**: Los 3 componentes tienen bien definida su responsabilidad. La Vista muestra los datos, el Controlador los transporta y el Modelo los procesa según la lógica de negocio
+3. **Reusabilidad**: Al estar separados en componentes y tener una responsabilidad definida, es fácil reutilizar código. El mismo modelo puede ser utilizado por varios controladores, o el mismo controlador puede ser usado por más de una vista.
+
+## Propósito
+
+La arquitectura de Software aplica diversos patrones, técnicas y conceptos con la intención de que nuestro sistema sea funcional, escalable en el tiempo, fácil de probar, seguro y con buen rendimiento. Lo que se traduce en:
+
+Una arquitectura bien diseñada **permite que el software crezca de manera eficiente**, tanto en términos de rendimiento como de funcionalidad, a medida que se agregan más usuarios o se requieren nuevas características.
+
+Un diseño adecuado f**acilita la corrección de errores, actualizaciones y modificaciones** sin afectar el funcionamiento general del sistema.
+
+La arquitectura debe ser eficiente en términos de rendimiento para **proporcionar una experiencia de usuario óptima**. Optimizar el uso de recursos es clave.
+
+Si bien es mucho más que solo eso, esto sería lo esencial que buscamos tener en cualquier software que queramos desarrollar.
+
+
+## Sin embargo…
+
+Existen muchos patrones arquitectónicos, y cada patrón puede implementarse de muchas formas. Cuál patrón elegir y cómo aplicarlo depende de un buen análisis de los requerimientos, la experiencia y toma de decisiones del equipo de desarrollo (o del arquitecto, esta responsabilidad tiene su propio rol)
+
+No existe una arquitectura ideal, todas ofrecen ventajas y desventajas. Todo depende del contexto específico del problema y la solución deseada.
+
+Por ejemplo, la arquitectura MVC ofrece un diseño muy simplificado del funcionamiento real de una aplicación y ofrece ciertas ventajas:
+
+- Permite crear implementaciones rápidas, útil al crear un MVP o validar una idea
+- Facilita el desarrollo de soluciones sencillas
+- Fácil de aplicar y entender
+
+Sin embargo, para problemas más complejos que contienen mucha lógica de negocio, integraciones con terceros y múltiples fuentes de datos este patrón se vuelve muy difícil de mantener, probar y escalar debido a sus limitaciones de diseño.
+
+Idealmente conviene aplicar MVC cuando tienes requerimientos sencillos o no planeas que sea durable en el tiempo
+
+Patrones más robustos y adaptables a gran escala se suelen llamar como **Clean Architecture** (Arquitecturas Limpias).
+
+Aquí destacan 3: **Hexagonal**, **Onion** y **Clean** y son ideales cuando necesitas mantenibilidad y escalabilidad.
+
+ Por supuesto, merecen su propio post donde hablaré de ellas más a detalle
