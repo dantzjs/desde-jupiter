@@ -4,7 +4,8 @@ import { getCollection } from 'astro:content';
 import Publications from '@components/Publications';
 import { defaultDescription } from '@config/config';
 
-const posts = await getCollection('blog');
+let posts = await getCollection('blog');
+posts = posts.sort((a: any, b: any) => b.data.created - a.data.created)
 ---
 
 <Layout title="Desde Júpiter" description={defaultDescription}>
