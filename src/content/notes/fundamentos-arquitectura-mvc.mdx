@@ -50,17 +50,17 @@ Por ejemplo, supongamos una aplicación sencilla de ordenes y pedidos que utiliz
 
 El flujo funcional es:
 
-1. El usuario desde una interfaz gráfica interactúa con la aplicación y decide crear un nuevo pedido.
-2. **La Vista** llama a un endpoint */orders* que se encuentra en el **Controlador**.
-3. Este controlador recibe los datos enviados desde la vista y se los envía al **Modelo**.
-4. El modelo procesa los datos del pedido, almacena en base de datos y retorna la respuesta al controlador.
-5. El controlador retorna la respuesta del Modelo a la vista para ser actualizada y mostrarle al usuario “Su pedido ha sido creado”. 
+1. El usuario desde una interfaz gráfica interactúa con la aplicación y decide crear un nuevo pedido
+2. **La Vista** llama a un endpoint <span class="bg-red p-1 rounded">/orders</span> que se encuentra en el **Controlador**
+3. Este controlador recibe los datos enviados desde la vista y se los envía al **Modelo**
+4. El modelo procesa los datos del pedido, almacena en base de datos y retorna la respuesta al controlador
+5. El controlador retorna la respuesta del Modelo a la vista para ser actualizada y mostrarle al usuario “Su pedido ha sido creado”
 
 Aquí podemos notar los 3 principios aplicados:
 
 1. **Abstracción**: La complejidad del sistema de simplificó a únicamente 3 componentes
 2. **Separación de responsabilidades**: Los 3 componentes tienen bien definida su responsabilidad. La Vista muestra los datos, el Controlador los transporta y el Modelo los procesa según la lógica de negocio
-3. **Reusabilidad**: Al estar separados en componentes y tener una responsabilidad definida, es fácil reutilizar código. El mismo modelo puede ser utilizado por varios controladores, o el mismo controlador puede ser usado por más de una vista.
+3. **Reusabilidad**: Al estar separados en componentes y tener una responsabilidad definida, es fácil reutilizar código. El mismo modelo puede ser utilizado por varios controladores, o el mismo controlador puede ser usado por más de una vista
 
 ## Propósito
 
@@ -68,7 +68,7 @@ La arquitectura de Software aplica diversos patrones, técnicas y conceptos con 
 
 Una arquitectura bien diseñada **permite que el software crezca de manera eficiente**, tanto en términos de rendimiento como de funcionalidad, a medida que se agregan más usuarios o se requieren nuevas características.
 
-Un diseño adecuado f**acilita la corrección de errores, actualizaciones y modificaciones** sin afectar el funcionamiento general del sistema.
+Un diseño adecuado **facilita la corrección de errores, actualizaciones y modificaciones** sin afectar el funcionamiento general del sistema.
 
 La arquitectura debe ser eficiente en términos de rendimiento para **proporcionar una experiencia de usuario óptima**. Optimizar el uso de recursos es clave.
 
@@ -77,7 +77,7 @@ Si bien es mucho más que solo eso, esto sería lo esencial que buscamos tener e
 
 ## Sin embargo…
 
-Existen muchos patrones arquitectónicos, y cada patrón puede implementarse de muchas formas. Cuál patrón elegir y cómo aplicarlo depende de un buen análisis de los requerimientos, la experiencia y toma de decisiones del equipo de desarrollo (o del arquitecto, esta responsabilidad tiene su propio rol)
+Existen muchos patrones arquitectónicos, y cada patrón puede implementarse de muchas formas. Cuál patrón elegir y cómo aplicarlo depende de un buen análisis de los requerimientos, la experiencia y toma de decisiones del equipo de desarrollo (o del arquitecto, esta responsabilidad tiene su propio rol).
 
 No existe una arquitectura ideal, todas ofrecen ventajas y desventajas. Todo depende del contexto específico del problema y la solución deseada.
 
@@ -89,10 +89,18 @@ Por ejemplo, la arquitectura MVC ofrece un diseño muy simplificado del funciona
 
 Aunque MVC pueda ser util en ciertos escenarios el problema es en casos más complejos donde hay mucha lógica de negocio, integraciones con terceros y múltiples fuentes de datos. Aquí este patrón se vuelve muy difícil de mantener, probar y escalar debido a sus limitaciones de diseño.
 
-Idealmente conviene aplicar MVC cuando tienes requerimientos sencillos o no planeas que sea durable en el tiempo
+Idealmente conviene aplicar MVC cuando tienes requerimientos sencillos o no planeas que sea durable en el tiempo.
 
-Patrones más robustos y adaptables a gran escala se suelen llamar como **Clean Architecture** (Arquitecturas Limpias).
+Patrones más robustos y adaptables a gran escala se llaman **Clean Architecture** (Arquitecturas Limpias).
 
-Aquí destacan 3: **Hexagonal**, **Onion** y **Clean** y son ideales cuando necesitas mantenibilidad y escalabilidad.
+Aquí destacan 3: **Hexagonal**, **Onion** y especialmente **Clean**, que es un punto de convergencia entre las dos primeras.
 
-Por supuesto, merecen su propio post donde hablaré de ellas más a detalle
+Por supuesto, merecen su propio post donde hablaré de ellas más a detalle.
+
+Y si. Arquitecturas avanzadas pueden parecer impresionantes y traer muchas ventajas consigo, pero...
+
+Durante el diseño de tu arquitectura debes evitar el **Overengineering** (sobre ingeniar). A veces por ser perfeccionistas terminamos agregando funciones y características que realmente no necesitamos, ni tú ni tu cliente.
+
+Esto provoca más complejidad al intentar evolucionar, posible aumento de costes y especialmente de tiempo.
+
+Solo mantenlo simple.

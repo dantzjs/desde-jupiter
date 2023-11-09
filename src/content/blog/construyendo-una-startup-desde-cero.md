@@ -36,7 +36,7 @@ Explico esta metodología con más detalle en [mi blog](/notes/event-storming)
 
 ### Elegir la Tecnología Correcta
 
-¡Felicidades!. Has validado tu idea de negocio y confirmado que tiene potencial. ¿Cómo la construimos?
+¡Felicidades!. Ya entiendes tu propia idea, ahora... ¿Cómo la construimos?
 
 Elegir el conjunto de tecnologías correcto es una de las etapas críticas de cualquier desarrollo porque, en pocas palabras, **son los pilares que lo sostendrán todo**. Factores como rendimiento, seguridad y escalabilidad juegan un papel importante al elegir qué frameworks o herramientas utilizar. Recuerda no pensar solo en las funciones actuales, sino centrarte en las futuras. **Considera cuán escalable puede ser la solución que elijas**.
 
@@ -56,25 +56,33 @@ Otro aspecto a considerar es preferir opciones que hayan sido probadas y bien do
 
 Aprender nuevas herramientas es importante, es lo que deberíamos hacer diariamente, pero crear un producto con la intención de lanzarlo al mercado ya es una apuesta arriesgada en muchos aspectos. **Evita agregar más variables si consideras que el riesgo no vale la pena**.
 
+Pueden parecer muchas interrogantes, pero no tienes que responderlas aún.
+
 ### MVP: La Primera Propuesta
 
-En este punto, deberías tener definido al menos en papel el MVP una vez completado el Event Storming.
+Una vez completado el Event Storming lo primero que necesitas es un MVP.
 
 El Producto Mínimo Viable no es más que el primer prototipo, la primera versión de tu producto, o más bien **la más básica**, que consiste solo en las funcionalidades esenciales para satisfacer las necesidades mínimas de tus clientes iniciales.
 
 Supongamos que estás creando una lista de tareas. ¿Qué necesita el usuario? Agregar, editar, completar y eliminar tareas. Tan simple como eso. Cualquier otra función cuenta como valor agregado, que por supuesto quieres y debes implementar, pero hazlo en una fase de iteración posterior. Si quieres que tu aplicación haga esto y aquello antes de salir, se convertirá en una lista interminable y nunca la llevarás al mercado.
 
-Con un MVP y un lanzamiento rápido al mercado, podrás **descubrir y comprender mejor las necesidades de tus usuarios** a través de comentarios para iterar y validar ideas antes de invertir más tiempo y recursos en funciones adicionales que probablemente no sean lo que quieren de tu aplicación.
+Puedes crearlo desde cero, o puedes utilizar **No Code**. Estas son plataformas que te permiten crear aplicaciones sin tener que escribir código. Todo el desarrollo se hace desde una interfaz gráfica, casi que "Drag and Drop", y en tiempo record puedes construir tu producto para diversos dispositivos.
+
+Por supuesto existen muchas limitantes y no debería ser una solución permamente. Solo lo recomiendo en fases iniciales.
+
+Analiza tu propio contexto, investiga si puedes recrear tu idea usando este tipo de plataformas o cuánto tiempo te llevaría desarrollarlo por tu cuenta. No es blanco ni negro. Solo recuerda que la prioridad es salir rápido.
+
+Con un MVP podrás **descubrir y comprender mejor las necesidades de tus usuarios** a través de comentarios para iterar y validar ideas antes de invertir más tiempo y recursos en funciones adicionales que probablemente no sean lo que quieren de tu aplicación.
 
 ### Gestión del Tiempo
 
 Repasemos:
 
 - [x]  Validar el modelo de negocio
-- [x]  Elegir la tecnología adecuada
+- [ ]  Elegir la tecnología adecuada
 - [x]  Identificar el MVP
 
-Ya tienes todo para comenzar a desarrollar tu aplicación, solo necesitas... tiempo.
+Ya solo necesitas... tiempo.
 
 Probablemente ya tienes un trabajo, ya sea a tiempo completo, a tiempo parcial o como freelance. Seguramente, tienes responsabilidades en casa y nunca olvides el tiempo en familia, el tiempo de descanso o simplemente el ocio personal.
 
