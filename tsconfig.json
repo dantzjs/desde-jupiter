@@ -1,19 +1,10 @@
 {
-  "extends": "astro/tsconfigs/strict",
+  // https://v3.nuxtjs.org/concepts/typescript
+  "extends": "./.nuxt/tsconfig.json",
   "compilerOptions": {
-    "jsx": "react-jsx",
-    "jsxImportSource": "react",
-    "strictNullChecks": true,
-    "allowJs": true,
-    "baseUrl": ".",
-    "paths": {
-      "@layouts/*": ["src/layouts/*"],
-      "@partials/*": ["src/layouts/partials/*"],
-      "@components/*": ["src/components/*"],
-      "@assets/*": ["src/assets/*"],
-      "@styles/*": ["src/styles/*"],
-      "@config/*": ["src/config/*"],
-      "@plugins/*": ["src/plugins/*"]
-    }
+    "target": "ES2022",
+    "moduleDetection": "force",
+    "noUncheckedIndexedAccess": true,
+    "lib": ["es2022", "dom", "dom.iterable"],
   }
 }
