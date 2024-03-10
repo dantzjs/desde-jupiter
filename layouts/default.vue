@@ -48,11 +48,15 @@
 </template>
 
 <script setup>
+const colorMode = useColorMode();
+
 const head = useLocaleHead({
   addDirAttribute: true,
   identifierAttribute: 'id',
   addSeoAttributes: true,
 });
+
+colorMode.preference = 'dark';
 </script>
 
 <style>

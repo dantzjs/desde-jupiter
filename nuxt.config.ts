@@ -10,7 +10,6 @@ export default defineNuxtConfig({
     'nuxt-security',
     '@nuxt/devtools',
     '@nuxtjs/eslint-module',
-    'nuxt-purgecss',
     [
       '@nuxtjs/google-fonts',
       {
