@@ -1,24 +1,57 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
   devtools: { enabled: true },
-  modules: ["@nuxt/ui", "@nuxt/content", "@nuxt/image", "@nuxtjs/i18n"],
+  modules: [
+    '@nuxt/ui',
+    '@nuxt/content',
+    '@nuxt/image',
+    '@nuxtjs/i18n',
+    'nuxt-csurf',
+    'nuxt-security',
+    '@nuxt/devtools',
+    '@nuxtjs/eslint-module',
+    'nuxt-purgecss',
+    [
+      '@nuxtjs/google-fonts',
+      {
+        families: {
+          Heebo: true,
+        },
+      },
+    ],
+  ],
   typescript: {
-    typeCheck: false,
+    typeCheck: true,
     strict: true,
   },
-  components: [{ path: "~/components/blocks", prefix: "B" }, "~/components"],
+  security: {
+    headers: {
+      crossOriginEmbedderPolicy:
+        process.env.NODE_ENV === 'development' ? 'unsafe-none' : 'require-corp',
+    },
+  },
+  components: [{ path: '~/components/blocks', prefix: 'B' }, '~/components'],
   i18n: {
     locales: [
       {
-        code: "en",
-        iso: "en-US",
+        code: 'en',
+        iso: 'en-US',
       },
       {
-        code: "es",
-        iso: "es-ES",
+        code: 'es',
+        iso: 'es-ES',
       },
     ],
-    defaultLocale: "es",
-    baseUrl: "https://desdejupiter.me",
+    defaultLocale: 'es',
+    baseUrl: 'https://desdejupiter.me',
+  },
+  vite: {
+    build: {
+      chunkSizeWarningLimit: 5000,
+    },
+    optimizeDeps: {
+      entries: ['./**/*.vue'],
+    },
+    plugins: [],
   },
 });

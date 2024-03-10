@@ -23,34 +23,33 @@
 
 <script setup lang="ts">
 const localePath = useLocalePath();
-
 const { t } = useI18n();
 
-const links = [
+const links = computed(() => [
   {
-    label: t("nav.home"),
-    icon: "i-heroicons-rocket-launch",
-    to: localePath("/"),
+    label: t('nav.home'),
+    icon: 'i-heroicons-rocket-launch',
+    to: localePath('/'),
+  },
+  /* {
+    label: t('nav.blog'),
+    icon: 'i-heroicons-pencil',
+    to: localePath('/blog'),
   },
   {
-    label: t("nav.blog"),
-    icon: "i-heroicons-pencil",
-    to: localePath("/blog"),
+    label: t('nav.notes'),
+    icon: 'i-heroicons-code-bracket',
+    to: localePath('/notes'),
   },
   {
-    label: t("nav.notes"),
-    icon: "i-heroicons-code-bracket",
-    to: localePath("/notes"),
-  },
+    label: t('nav.projects'),
+    icon: 'i-heroicons-briefcase',
+    to: localePath('/projects'),
+  }, */
   {
-    label: t("nav.projects"),
-    icon: "i-heroicons-briefcase",
-    to: localePath("/projects"),
+    label: t('nav.about'),
+    icon: 'i-heroicons-user-circle',
+    to: localePath('/about'),
   },
-  {
-    label: t("nav.about"),
-    icon: "i-heroicons-user-circle",
-    to: localePath("/about"),
-  },
-];
+]);
 </script>

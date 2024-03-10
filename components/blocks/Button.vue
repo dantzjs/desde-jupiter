@@ -6,11 +6,11 @@ const props = defineProps({
   },
   color: {
     type: String,
-    default: "primary",
+    default: 'primary',
   },
   variant: {
     type: String,
-    default: "solid",
+    default: 'solid',
   },
 });
 const { text, color, variant } = props;
@@ -21,7 +21,7 @@ const { text, color, variant } = props;
     class="text-base"
     :color="color"
     :variant="variant"
-    :ui="{ rounded: 'rounded-none' }"
+    :ui="{ rounded: 'rounded-none', font: 'font-ui' }"
   >
     {{ text }}
   </UButton>

@@ -1,4 +1,10 @@
 {
   // https://v3.nuxtjs.org/concepts/typescript
   "extends": "./.nuxt/tsconfig.json",
+  "compilerOptions": {
+    "target": "ES2022",
+    "moduleDetection": "force",
+    "noUncheckedIndexedAccess": true,
+    "lib": ["es2022", "dom", "dom.iterable"],
+  }
 }

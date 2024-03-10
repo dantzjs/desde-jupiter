@@ -8,33 +8,31 @@
     <UContainer
       :ui="{
         padding: 'p-0',
-        constrained: 'max-w-100',
+        constrained: '',
       }"
     >
-      <section class="mt-4 grid w-full grid-cols-4 gap-4">
-        <a href="#" target="_blank" rel="noopener noreferrer">
+      <section class="mt-4 flex w-full justify-around">
+        <a
+          href="https://www.linkedin.com/in/dantzjs/"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
           <UIcon
             class="h-5 w-5 text-gray-400"
             name="i-tabler-brand-linkedin"
             dynamic
           />
         </a>
-        <a href="#" target="_blank" rel="noopener noreferrer">
+        <a
+          href="https://github.com/dantzjs"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
           <UIcon
             class="h-5 w-5 text-gray-400"
             name="i-tabler-brand-github"
             dynamic
           />
-        </a>
-        <a href="http://" target="_blank" rel="noopener noreferrer">
-          <UIcon
-            class="h-5 w-5 text-gray-400"
-            name="i-tabler-file-cv"
-            dynamic
-          />
-        </a>
-        <a href="mailto:">
-          <UIcon class="h-5 w-5 text-gray-400" name="i-tabler-mail" dynamic />
         </a>
       </section>
     </UContainer>
