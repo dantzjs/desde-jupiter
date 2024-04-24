@@ -7,17 +7,10 @@ export default defineNuxtConfig({
     '@nuxt/image',
     '@nuxtjs/i18n',
     'nuxt-csurf',
-    'nuxt-security',
     '@nuxt/devtools',
-    [
-      '@nuxtjs/google-fonts',
-      {
-        families: {
-          Heebo: true,
-        },
-      },
-    ],
-    "@nuxt/eslint"
+    '@nuxtjs/google-fonts',
+    "@nuxt/eslint",
+    "nuxt-security"
   ],
   typescript: {
     typeCheck: true,
@@ -27,6 +20,11 @@ export default defineNuxtConfig({
     headers: {
       crossOriginEmbedderPolicy:
         process.env.NODE_ENV === 'development' ? 'unsafe-none' : 'require-corp',
+    },
+  },
+  googleFonts: {
+    families: {
+      Heebo: true,
     },
   },
   components: [{ path: '~/components/blocks', prefix: 'B' }, '~/components'],
