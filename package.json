@@ -13,7 +13,6 @@
     "cz": "npx cz",
     "release": "commit-and-tag-version"
   },
-  "packageManager": "yarn@4.1.0",
   "dependencies": {
     "@nuxt/content": "^2.12.1",
     "@nuxt/ui": "^2.14.2",
