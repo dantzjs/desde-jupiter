@@ -9,7 +9,6 @@ export default defineNuxtConfig({
     'nuxt-csurf',
     'nuxt-security',
     '@nuxt/devtools',
-    '@nuxtjs/eslint-module',
     [
       '@nuxtjs/google-fonts',
       {
@@ -18,6 +17,7 @@ export default defineNuxtConfig({
         },
       },
     ],
+    "@nuxt/eslint"
   ],
   typescript: {
     typeCheck: true,
