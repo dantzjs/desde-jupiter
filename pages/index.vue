@@ -1,39 +1,26 @@
 <template>
   <div>
-    <section class="pb-4">
-      <div class="flex gap-4 font-ui text-xs text-black dark:text-gray-400">
+    <section class="h-screen flex justify-center items-center">
+      <!-- <div class="flex gap-4 font-ui text-xs text-black dark:text-gray-400">
         <UBadge variant="subtle">DEVOPS</UBadge>
         <UBadge variant="subtle">DEVELOPER</UBadge>
         <UBadge variant="subtle">TECH LEADER</UBadge>
-      </div>
-    </section>
-
-    <section class="flex justify-between gap-4">
-      <div class="flex flex-col gap-8">
-        <h1 class="text-4xl">{{ $t('welcome') }}</h1>
-        <p class="max-w-prose text-base leading-7">{{ $t('bio.p1') }}</p>
-        <p class="max-w-prose text-base leading-7">{{ $t('bio.p2') }}</p>
-        <p class="max-w-prose text-base leading-7">{{ $t('bio.p3') }}</p>
-
-        <div class="flex gap-4">
-          <BButton
-            to="/about"
-            :text="$t('buttons.profile')"
-          />
-          <!-- <BButton
-            :text="$t('buttons.profile')"
-            color="secondary"
-            variant="link"
-          /> -->
+      </div> -->
+      <div class="flex flex-col font-ui text-5xl text-gray-300">
+        <div class="flex">
+          <p v-for="char in heroMessage[0]" :key="char" class="w-20 h-24 border border-gray-700 flex justify-center items-center">{{char}}</p>
+          <span class="w-20 h-24"/>
+          <p class="w-20 h-24 border border-gray-700 flex justify-center items-center text-blue-500">{{"#"}}</p>
         </div>
-      </div>
-
-      <div class="hidden flex-1 justify-end lg:flex">
-        <!-- <Placeholder
-          src=""
-          alt=""
-          class="h-96 w-72 min-w-52 rounded-2xl border-2 border-solid border-gray-800 object-cover p-2"
-        /> -->
+        <div class="flex justify-end">
+          <span class="w-20 h-24"/>
+          <p class="w-20 h-24 border border-gray-700 flex justify-center items-center text-blue-500">{{"~"}}</p>
+          <span class="w-20 h-24"/>
+          <p v-for="char in heroMessage[1]" :key="char" class="w-20 h-24 border border-gray-700 flex justify-center items-center">{{char}}</p>
+        </div>
+        <div class="flex">
+          <p v-for="char in heroMessage[2]" :key="char" class="w-20 h-24 border border-gray-700 flex justify-center items-center">{{char}}</p>
+        </div>
       </div>
     </section>
 
@@ -62,3 +49,36 @@
     </section>
   </div>
 </template>
+
+<script setup lang="ts">
+import anime from 'animejs'
+
+const heroMessage = ref(['HOLA', 'DESDE', 'JÚPITER'])
+const scrambledWords = ref([])
+
+const scrambleAnimation = (element, char) => {
+      let scrambleChar = Math.random().toString(36).substring(7)
+
+      element.textContent = scrambleChar
+
+      anime({
+        targets: element,
+        textContent: char,
+        duration: 2000,
+        round: 1,
+        easing: 'easeInOutCubic',
+        complete: () => {
+          setTimeout(() => scrambleAnimation(element, char), 1000)
+        }
+      })
+    }
+
+    onMounted(() => {
+      heroMessage.value.forEach((word, index) => {
+        word.split('').forEach((char, charIndex) => {
+          const element = document.querySelector(`.flex:nth-child(${index + 1}) p:nth-child(${charIndex + 1}) span`)
+          scrambleAnimation(element, char)
+        })
+      })
+    })
+</script>

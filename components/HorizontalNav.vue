@@ -1,18 +1,7 @@
 <template>
   <nav
-    class="flex w-full items-center justify-between border-2 border-solid border-gray-800 p-2 font-ui"
+    class="flex w-full items-center justify-between p-2 font-ui fixed top-0"
   >
-    <div class="w-full">
-      <!-- <UInput
-        v-model="query"
-        name="q"
-        placeholder="Search..."
-        icon="i-heroicons-magnifying-glass-20-solid"
-        autocomplete="off"
-        :ui="{ base: 'w-2/3 md:w-1/3' }"
-        color="gray"
-      /> -->
-    </div>
     <div class="flex items-center gap-2 md:gap-4">
       <!-- <UToggle
         v-model="isLight"
@@ -20,14 +9,14 @@
         off-icon="i-heroicons-moon-20-solid"
         size="xl"
       /> -->
-      <USelect
+      <!-- <USelect
         v-model="currentLang"
         :options="langs"
         option-attribute="name"
         :padded="true"
         class="w-24"
         @change="changeLocale($event)"
-      />
+      /> -->
       <UDropdown
         :items="links"
         :popper="{ placement: 'bottom-start' }"
@@ -45,8 +34,9 @@
 <script setup lang="ts">
 const localePath = useLocalePath();
 const { t, locale, setLocale } = useI18n();
+
+/* 
 const switchLocalePath = useSwitchLocalePath();
-// const colorMode = useColorMode();
 const currentLang = ref(locale);
 
 const langs = [
@@ -65,17 +55,7 @@ function changeLocale(event: any) {
   currentLang.value = event.target.value;
 
   switchLocalePath(currentLang.value);
-}
-
-// const query = ref('');
-/* const isLight = computed({
-  get() {
-    return colorMode.value === 'light';
-  },
-  set() {
-    colorMode.preference = colorMode.value === 'dark' ? 'light' : 'dark';
-  },
-}); */
+} */
 
 const EXTERNAL_ICON = 'i-heroicons-arrow-top-right-on-square';
 
