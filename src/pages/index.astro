@@ -1,0 +1,68 @@
+---
+import BaseHead from '../components/BaseHead.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+import { SITE_TITLE, SITE_DESCRIPTION, DEV_STACK, CLOUD_STACK, TOOLS_STACK } from '../consts';
+import { Icon } from 'astro-icon/components';
+import HorizontalSlider from '../components/HorizontalSlider.astro'
+import SquareCard from '../components/SquareCard.astro'
+---
+
+<!doctype html>
+<html lang="es">
+	<head>
+		<BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
+	</head>
+	<body class="grid grid-rows-[auto_1fr] min-h-screen grid-cols-1">
+		<Header />
+		<main class="grid grid-cols-1 lg:grid-cols-[30rem_minmax(24rem,_30rem)] xl:grid-cols-[30rem_minmax(40rem,_45rem)] px-gr3 md:px-gr5 md:py-gr4 justify-between items-center gap-gr3">
+			<section>
+				<h2 class="text-white text-gr3 font-bold">
+					Hola desde Júpiter 🖖, <br> soy Dantz
+				</h2>
+				<p class="text-white prose prose-lg py-gr2">
+					Entusiasta tecnológico con enfoque en infraestructura y desarrollo de APIs. Disfruto construir software moderno, las películas y los video-juegos. ¿Dudas? Te leo 👇
+				</p>
+				<a class="bg-primary text-black transition hover:bg-primary-400 cursor-pointer  block p-gr1 text-center text-lg font-bold rounded-lg">
+					Ponerse en Contacto
+				</a>
+				<div class="w-full flex flex-col justify-center items-center">
+					<p class="text-white prose prose-sm py-gr1 text-center">
+						Estoy convencido de que la mejor forma de aprender es enseñando<br>Te invito a leer mis <a href="" class="text-primary no-underline opacity-95 hover:opacity-100 transition">últimas publicaciones</a> :)
+					</p>
+					<p class="prose prose-sm text-center">
+						<a href="https://platzi.com/p/dantzjs/" class="text-primary no-underline opacity-95 hover:opacity-100 transition">Nunca parar de aprender</a>🚀
+					</p>
+				</div>
+			</section>
+			<section class="flex flex-col gap-y-gr2 text-black-50 lg:max-w-gr8 xl:max-w-gr9">
+				<HorizontalSlider animation='animate-infinite-scroll-left'>
+					{DEV_STACK.concat(DEV_STACK).map((el) => (
+						<SquareCard class="hover:text-primary hover:border-primary">
+							<Icon name={`tabler:${el.icon}`} />
+							<span class="text-gr1">{el.name}</span>
+						</SquareCard>
+					))}
+				</HorizontalSlider>
+				<HorizontalSlider animation='animate-infinite-scroll-right'>
+					{CLOUD_STACK.concat(CLOUD_STACK).map((el) => (
+						<SquareCard class="hover:text-primary hover:border-primary">
+							<Icon name={`tabler:${el.icon}`} />
+							<span class="text-gr1">{el.name}</span>
+						</SquareCard>
+					))}
+				</HorizontalSlider>
+				<HorizontalSlider animation='animate-infinite-scroll-left'>
+					{TOOLS_STACK.concat(TOOLS_STACK).map((el) => (
+						<SquareCard class="hover:text-primary hover:border-primary">
+							<Icon name={`tabler:${el.icon}`} />
+							<span class="text-gr1">{el.name}</span>
+						</SquareCard>
+					))}
+				</HorizontalSlider>
+			</section>
+		</main>
+		<Footer />
+	</body>
+</html>
+

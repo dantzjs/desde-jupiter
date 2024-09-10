@@ -1,0 +1,33 @@
+/*
+  The CSS in this style tag is based off of Bear Blog's default CSS.
+  https://github.com/HermanMartinus/bearblog/blob/297026a877bc2ab2b3bdfbd6b9f7961c350917dd/templates/styles/blog/default.css
+  License MIT: https://github.com/HermanMartinus/bearblog/blob/master/LICENSE.md
+ */
+
+ @import "tailwindcss/base";
+
+@font-face {
+	font-family: 'Atkinson';
+	src: url('/fonts/atkinson-regular.woff') format('woff');
+	font-weight: 400;
+	font-style: normal;
+	font-display: swap;
+}
+@font-face {
+	font-family: 'Atkinson';
+	src: url('/fonts/atkinson-bold.woff') format('woff');
+	font-weight: 700;
+	font-style: normal;
+	font-display: swap;
+}
+
+body {
+	background-color: #13161c;
+	background-image: 
+	  radial-gradient(40% 60% at 50% 20%, rgba(255, 106, 0, 0.25) 0%, rgba(19, 22, 28, 0) 80%),
+	  radial-gradient(60% 60% at 80% 10%, rgba(255, 106, 0, 0.15) 0%, rgba(19, 22, 28, 0) 90%),
+	  radial-gradient(50% 40% at 20% 80%, rgba(19, 22, 28, 0.5) 0%, rgba(19, 22, 28, 0) 90%),
+	  linear-gradient(180deg, rgba(19, 22, 28, 0.95) 20%, rgba(19, 22, 28, 0.75) 70%, #13161c);
+	background-repeat: no-repeat;
+	background-size: 180%;
+}
