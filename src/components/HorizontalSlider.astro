@@ -1,13 +1,14 @@
 ---
 interface Props {
 	animation?: 'animate-infinite-scroll-left'|'animate-infinite-scroll-right';
+    class?: any
 }
 
-const { animation = 'animate-infinite-scroll-left' } = Astro.props;
+const { animation = 'animate-infinite-scroll-left', class: className, } = Astro.props;
 ---
 
 <div class="inline-flex flex-nowrap overflow-hidden [mask-image:_linear-gradient(to_right,transparent_0,_black_128px,_black_calc(100%-200px),transparent_100%)]">
-    <div class:list={['flex', 'gap-gr2', animation]}>
+    <div class:list={['flex', 'gap-gr2', animation, className]}>
         <slot/>
     </div>
 </div>

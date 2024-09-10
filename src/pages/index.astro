@@ -52,7 +52,7 @@ import SquareCard from '../components/SquareCard.astro'
 						</SquareCard>
 					))}
 				</HorizontalSlider>
-				<HorizontalSlider animation='animate-infinite-scroll-left'>
+				<HorizontalSlider animation='animate-infinite-scroll-left' class="hidden md:inline-flex">
 					{TOOLS_STACK.concat(TOOLS_STACK).map((el) => (
 						<SquareCard class="hover:text-primary hover:border-primary">
 							<Icon name={`tabler:${el.icon}`} />

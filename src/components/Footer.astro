@@ -1,8 +1,17 @@
 ---
 const today = new Date();
-import { Icon } from 'astro-icon/components';
+import { Icon } from "astro-icon/components";
 ---
 
-<footer class="flex items-center justify-center lg:justify-start text-white text-center p-gr2">
-	<p>&copy; {today.getFullYear()} desdejupiter.me | Creado con <a href="https://astro.build" class="text-primary font-bold no-underline opacity-95 hover:opacity-100 transition">Astro</a> y <Icon class="inline text-primary" name="tabler:heart-filled"/></p>
+<footer
+  class="flex flex-col md:flex-row items-center justify-center lg:justify-start text-white text-center p-gr2 gap-gr1/2"
+>
+  <p>
+    &copy; {today.getFullYear()} desdejupiter.me <span class="hidden md:inline">|</span>
+  </p>
+  <p>Creado con <a
+	href="https://astro.build"
+	class="text-primary font-bold no-underline opacity-95 hover:opacity-100 transition"
+	>Astro</a
+  > y <Icon class="inline text-primary" name="tabler:heart-filled" /></p>
 </footer>
