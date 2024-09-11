@@ -2,25 +2,28 @@
 import HeaderLink from './HeaderLink.astro';
 import { Astronav, MenuItems, MenuIcon } from "astro-navbar";
 import { SITE_TITLE } from '../consts';
+import { Icon } from "astro-icon/components";
 ---
 
 <header class="md:flex p-5 gap-5 text-white">
 	<Astronav closeOnClick>
-	  <div class="flex justify-between">
+	  <div class="flex justify-between min-w-fit">
 		<h2>{SITE_TITLE}</h2>
 		<div class="block md:hidden">
 		  <MenuIcon class="w-gr2 h-gr2 text-white-100" />
 		</div>
 	  </div>
-	  <MenuItems class="hidden md:flex">
+	  <MenuItems class="hidden md:flex w-full justify-between">
 		<ul class="flex flex-col md:flex-row md:gap-5">
 			<li><HeaderLink href="/">Inicio</HeaderLink></li>
 			<li class="hidden"><HeaderLink href="#">Blog</HeaderLink></li>
 			<li class="hidden"><HeaderLink href="#">Catalogo</HeaderLink></li>
-			<li><HeaderLink href="#">Experiencia</HeaderLink></li>
+			<li><HeaderLink href="/experience">Experiencia</HeaderLink></li>
 			<li><HeaderLink href="#">Acerca de Mi</HeaderLink></li>
 			<li><HeaderLink href="#">Contacto</HeaderLink></li>
 		</ul>
+		<div class="hidden md:flex gap-gr1">
+		</div>
 	  </MenuItems>
 	</Astronav>
   </header>

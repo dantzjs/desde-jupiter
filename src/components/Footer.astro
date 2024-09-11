@@ -4,14 +4,28 @@ import { Icon } from "astro-icon/components";
 ---
 
 <footer
-  class="flex flex-col md:flex-row items-center justify-center lg:justify-start text-white text-center p-gr2 gap-gr1/2"
+  class="flex flex-col md:flex-row items-center justify-center md:justify-between text-white text-center py-gr2 md:p-gr2 gap-gr1/2"
 >
-  <p>
-    &copy; {today.getFullYear()} desdejupiter.me <span class="hidden md:inline">|</span>
-  </p>
-  <p>Creado con <a
-	href="https://astro.build"
-	class="text-primary font-bold no-underline opacity-95 hover:opacity-100 transition"
-	>Astro</a
-  > y <Icon class="inline text-primary" name="tabler:heart-filled" /></p>
+  <div>
+    <p>
+      &copy; {today.getFullYear()} desdejupiter.me | Creado con
+      <a
+        href="https://astro.build"
+        class="text-primary font-bold no-underline opacity-95 hover:opacity-100 transition"
+      >
+        Astro
+      </a> y <Icon class="inline text-primary" name="tabler:heart-filled" />
+    </p>
+  </div>
+  <div class="flex gap-gr2 content-center">
+    <a href="https://github.com/dantzjs/" class="content-center">GitHub</a>
+    <a href="" class="content-center">Linkedin</a>
+  </div>
 </footer>
+
+<style>
+  .bmc-btn svg {
+    height: 24px !important;
+    display: hidden;
+  }
+</style>

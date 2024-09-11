@@ -1,0 +1,20 @@
+---
+const { title, tags, class: className, ...props } = Astro.props;
+---
+
+<article>
+    <h3>{title}</h3>
+    <hr>
+    <slot/>
+    <footer class:list={[
+        'text-primary-200',
+        'grid',
+        'grid-flow-col',
+        'grid-rows-2',
+        'gap-gr1',
+        'text-base',
+        'md:flex'
+    ]}>
+        {tags.map((tag: string) => <span>{tag}</span>)}
+    </footer>
+</article>

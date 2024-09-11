@@ -29,5 +29,15 @@ body {
 	  radial-gradient(50% 40% at 20% 80%, rgba(19, 22, 28, 0.5) 0%, rgba(19, 22, 28, 0) 90%),
 	  linear-gradient(180deg, rgba(19, 22, 28, 0.95) 20%, rgba(19, 22, 28, 0.75) 70%, #13161c);
 	background-repeat: no-repeat;
-	background-size: 180%;
+	background-size: 270%;
+}
+
+.prose {
+	color: #F5F3EF;
+}
+
+h1,
+h2,
+h3 {
+	color: #F5F3EF !important
 }
