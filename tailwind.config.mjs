@@ -103,6 +103,12 @@ export default {
           from: { transform: 'translateX(-50%)' },
           to: { transform: 'translateX(50)' },
         }
+      },
+      backgroundSize: {
+        'auto': 'auto',
+        'cover': 'cover',
+        'contain': 'contain',
+        '270%': '270%',
       }      
     },
   },
