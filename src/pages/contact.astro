@@ -1,0 +1,91 @@
+---
+import BaseHead from '../components/BaseHead.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
+---
+
+<!doctype html>
+<html lang="es">
+	<head>
+		<BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
+	</head>
+	<body class="grid grid-rows-[auto_1fr] grid-cols-1 min-h-screen text-white">
+		<Header />
+		<main class="px-gr3 md:px-gr5 md:py-gr4 flex flex-col md:flex-row items-center justify-between gap-gr2 lg:gap-gr6">
+            <section class="prose">
+                <h2 class="text-white text-gr3 font-bold">
+					Conectemos y trabajemos juntos 🚀
+				</h2>
+                <p>
+                    Estoy siempre abierto a nuevas oportunidades, colaboraciones y conversaciones sobre tecnología. Si tienes alguna duda, propuesta o simplemente quieres compartir una idea, ¡no dudes en contactarme!
+                </p>
+                <p>
+                    Completa el formulario y estaré encantado de responderte lo antes posible. <strong class="text-white">¡Hablemos!</strong>
+                </p>
+            </section>
+            <section class="bg-black-400 rounded-lg border-4 border-black-300 w-full h-full">
+                <h3 class="text-gr2 font-bold p-gr1">
+                    Envíame un mensaje
+                </h3>
+                <form name="contact" method="POST" data-netlify="true" class="p-gr1 mx-auto">
+                    <div class="mb-gr2">
+                        <label for="email" class="block mb-gr1/2 text-sm font-medium text-white">
+                            Correo
+                        </label>
+                        <input
+                            type="email"
+                            id="email"
+                            class="
+                                peer
+                                shadow-sm
+                                bg-black-200
+                                border
+                                border-black-50
+                                text-white
+                                text-sm
+                                rounded-md
+                                block
+                                w-full
+                                p-2.5"
+                            placeholder="minombre@miemail.com"
+                            required
+                        />
+                        <p class="mt-2 invisible peer-invalid:visible text-red-400 text-sm">
+                            El correo es obligatorio
+                        </p>
+                    </div>
+                    <div class="mb-5">
+                        <label for="message" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">
+                            Mensaje
+                        </label>
+                        <textarea
+                            id="message"
+                            rows="4"
+                            class="
+                                peer
+                                block
+                                p-2.5
+                                w-full
+                                text-sm
+                                text-white
+                                bg-black-200
+                                rounded-lg
+                                border
+                                border-black-50"
+                                placeholder="Tengo una idea sobre..."
+                                required
+                        ></textarea>
+                        <p class="mt-2 invisible peer-invalid:visible text-red-400 text-sm">
+                            El mensaje es obligatorio
+                        </p>
+                    </div>
+                    <button type="submit" class="text-black bg-primary font-medium rounded-lg text-md px-5 py-2.5 text-center hover:bg-primary-400 cursor-pointer">
+                        Enviar mensaje
+                    </button>
+                </form>
+            </section>
+		</main>
+		<Footer />
+	</body>
+</html>

@@ -1,6 +1,5 @@
 ---
 const today = new Date();
-import { Icon } from "astro-icon/components";
 ---
 
 <footer
@@ -14,12 +13,15 @@ import { Icon } from "astro-icon/components";
         class="text-primary font-bold no-underline opacity-95 hover:opacity-100 transition"
       >
         Astro
-      </a><Icon class="inline text-primary" name="tabler:brand-astro" />
+      </a>
     </p>
   </div>
   <div class="flex gap-gr2 content-center">
+    <a href="/contact" class="content-center">Contacto</a>
+    <a href="/rss.xml" class="content-center">RSS</a>
+    <a href="#" class="content-center">CV</a>
     <a href="https://github.com/dantzjs/" class="content-center">GitHub</a>
-    <a href="" class="content-center">Linkedin</a>
+    <a href="#" class="content-center">Linkedin</a>
   </div>
 </footer>
 
