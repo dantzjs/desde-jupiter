@@ -28,7 +28,13 @@ import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
                 <h3 class="text-gr2 font-bold p-gr1">
                     Envíame un mensaje
                 </h3>
-                <form name="contact" method="POST" data-netlify="true" class="p-gr1 mx-auto">
+                <form name="contact" method="POST" data-netlify="true" netlify-honeypot class="p-gr1 mx-auto">
+                    <p class="hidden">
+                        <label>
+                          Don’t fill this out if you’re human: <input name="bot-field" />
+                        </label>
+                    </p>
+                    <input type="hidden" name="form-name" value="contact" />
                     <div class="mb-gr2">
                         <label for="email" class="block mb-gr1/2 text-sm font-medium text-white">
                             Correo
@@ -62,6 +68,7 @@ import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
                         <textarea
                             id="message"
                             rows="4"
+                            wrap="soft"
                             class="
                                 peer
                                 block
@@ -80,7 +87,7 @@ import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
                             El mensaje es obligatorio
                         </p>
                     </div>
-                    <button type="submit" class="text-black bg-primary font-medium rounded-lg text-md px-5 py-2.5 text-center hover:bg-primary-400 cursor-pointer">
+                    <button type="submit" class="text-black bg-primary font-medium rounded-md text-md px-5 py-2.5 text-center hover:bg-primary-400 cursor-pointer">
                         Enviar mensaje
                     </button>
                 </form>
