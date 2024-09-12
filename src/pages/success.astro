@@ -1,0 +1,28 @@
+---
+import BaseHead from '../components/BaseHead.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
+import { Icon } from "astro-icon/components";
+---
+
+<!doctype html>
+<html lang="es">
+	<head>
+		<BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
+	</head>
+	<body class="grid grid-rows-[auto_1fr] grid-cols-1 min-h-screen text-white">
+		<Header />
+		<main class="px-gr3 md:px-gr5 md:py-gr4 flex flex-col items-center justify-center gap-gr1">
+            <Icon name="tabler:circle-dashed-check" size={124} />
+            <p>Mensaje enviado correctamente</p>
+            <a
+                href="/"
+                class="text-primary font-bold no-underline opacity-95 hover:opacity-100 transition"
+            >
+                Volver al inicio
+            </a>
+		</main>
+		<Footer />
+	</body>
+</html>

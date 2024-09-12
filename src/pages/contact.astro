@@ -3,6 +3,7 @@ import BaseHead from '../components/BaseHead.astro';
 import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
 import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
+import { Icon } from "astro-icon/components";
 ---
 
 <!doctype html>
@@ -42,6 +43,7 @@ import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
                         <input
                             type="email"
                             id="email"
+                            name="email"
                             class="
                                 peer
                                 shadow-sm
@@ -57,9 +59,6 @@ import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
                             placeholder="minombre@miemail.com"
                             required
                         />
-                        <p class="mt-2 invisible peer-invalid:visible text-red-400 text-sm">
-                            El correo es obligatorio
-                        </p>
                     </div>
                     <div class="mb-5">
                         <label for="message" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">
@@ -67,6 +66,7 @@ import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
                         </label>
                         <textarea
                             id="message"
+                            name="message"
                             rows="4"
                             wrap="soft"
                             class="
@@ -83,13 +83,14 @@ import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
                                 placeholder="Tengo una idea sobre..."
                                 required
                         ></textarea>
-                        <p class="mt-2 invisible peer-invalid:visible text-red-400 text-sm">
-                            El mensaje es obligatorio
-                        </p>
                     </div>
                     <button type="submit" class="text-black bg-primary font-medium rounded-md text-md px-5 py-2.5 text-center hover:bg-primary-400 cursor-pointer">
                         Enviar mensaje
                     </button>
+                    <hr class="my-gr1 border-black-200">
+                    <div class="flex justify-center">
+                        <a href="https://www.linkedin.com/in/dantzjs/"><Icon name="tabler:brand-linkedin" size={28} /></a>
+                    </div>
                 </form>
             </section>
 		</main>
