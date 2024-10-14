@@ -1,5 +1,5 @@
 export const SITE_TITLE = 'Desde Júpiter';
-export const SITE_DESCRIPTION = 'SRE | DevOps Specialist | Building Scalable, Secure Infrastructures | Passionate About Automation & Cloud Solutions';
+export const SITE_DESCRIPTION = 'SRE | DevOps | Building Scalable, Secure Infrastructures | Passionate About Automation & Cloud Solutions';
 
 export const DEV_STACK = [
     { name: 'HTML', icon: 'brand-html5' },
